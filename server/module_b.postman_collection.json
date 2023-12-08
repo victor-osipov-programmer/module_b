@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "9f7b0eeb-20bd-4bc9-b6e2-cc5e701f63f9",
+		"name": "module_b",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31375668"
+	},
+	"item": [
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MAX22Nmv7zLWrvxCm9HI!TPNmoyGClZ-Gh5exOI1Q#ZG0ks7Xc4AQSo8GQR77MjxIzzEkG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"fimdi\",\r\n    \"password\": \"vios\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/logout?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"vas\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "login",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "img",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "photo_file",
+							"type": "file",
+							"src": "/C:/Users/Student/Pictures/бог.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create work shift",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"start\": \"2024-03-26 08:00\",\r\n\"end\": \"2024-03-26 17:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/work-shift",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"work-shift"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open work shift",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/work-shift/1/open",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"work-shift",
+						"1",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Close work shift",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/work-shift/2/close",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"work-shift",
+						"2",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add employee work shift",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EsWoerk%FuSJBbJWU5sY%j7WuNNgDFrlCMHwO@c-K4NTGquf-WMJBXc#T8!f9mstT-DcVX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/work-shift/5/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"work-shift",
+						"5",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get work shift orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WlXX2GsuVi-lVStccPqES!OH$t5MjRrcEpsv@Foz66RXCtjll%fMbaLj1aoxHJib4Cy0K8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/work-shift/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"work-shift",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WlXX2GsuVi-lVStccPqES!OH$t5MjRrcEpsv@Foz66RXCtjll%fMbaLj1aoxHJib4Cy0K8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"work_shift_id\":2,\r\n\"table_id\":2,\r\n\"number_of_person\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get order details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WlXX2GsuVi-lVStccPqES!OH$t5MjRrcEpsv@Foz66RXCtjll%fMbaLj1aoxHJib4Cy0K8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change the order status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cd1CU4gol74Vm@%6yHQW%3xVALYFr%yfytqnUWw4F2kSzWQyMrsD#ikQJSx9uYusRfw7vc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"status\":\"ready\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api-tort/order/8/change-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"order",
+						"8",
+						"change-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get orders current shift",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cd1CU4gol74Vm@%6yHQW%3xVALYFr%yfytqnUWw4F2kSzWQyMrsD#ikQJSx9uYusRfw7vc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api-tort/order/taken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api-tort",
+						"order",
+						"taken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
