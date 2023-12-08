@@ -1,15 +1,11 @@
 const express = require('express');
 const formData = require("express-form-data");
+const path = require('path')
 const getUserAccessData = require('./middleware/getUserAccessData.js')
 const app = express();
 
-const os = require("os");
-
-const path = require('path')
-console.log(path.resolve('photos'));
 const options = {
-  uploadDir: path.resolve('photos'),
-  // autoClean: true
+  uploadDir: path.resolve('photos')
 };
 
 const loginRouter = require('./routes/login');
